@@ -247,7 +247,7 @@ Transform:
   m_GameObject: {fileID: 344232643}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 13.025843, y: 13.492821, z: -1.0678196}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1978396579}
   m_RootOrder: 5
@@ -613,6 +613,7 @@ GameObject:
   - component: {fileID: 902645618}
   - component: {fileID: 902645617}
   - component: {fileID: 902645616}
+  - component: {fileID: 902645620}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -692,12 +693,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902645615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.11, y: 0.58, z: -7.12}
+  m_LocalPosition: {x: 12.16, y: 1.34, z: 11.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &902645620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902645615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bba0c2423b5e3b4c93b99e7497ce25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitLayers:
+    serializedVersion: 2
+    m_Bits: 2147483647
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,8 +998,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1805430011}
-  - component: {fileID: 1805430010}
   - component: {fileID: 1805430012}
+  - component: {fileID: 1805430010}
   m_Layer: 0
   m_Name: A*
   m_TagString: Untagged
@@ -1000,14 +1016,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805430009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a563012e385bb747964c4f2cbc6a290, type: 3}
+  m_Script: {fileID: 11500000, guid: 086e6a6776e8163488216c589945332b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unwalkableLayerMask:
+  StartPosition: {fileID: 902645619}
+  WallMask:
     serializedVersion: 2
     m_Bits: 64
-  gridWorldSize: {x: 30, y: 30}
-  nodeRadius: 0.12
+  vGridWorldSize: {x: 30, y: 30}
+  fNodeRadius: 0.19
+  fDistanceBetweenNodes: 0.43
 --- !u!4 &1805430011
 Transform:
   m_ObjectHideFlags: 0
@@ -1031,11 +1049,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1805430009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 417eb9849345c8e48a8c8b35bdee3594, type: 3}
+  m_Script: {fileID: 11500000, guid: f77bede4f8b500349a0689a09a5feb54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seeker: {fileID: 902645619}
-  target: {fileID: 344232644}
+  StartPosition: {fileID: 902645619}
+  TargetPosition: {fileID: 344232644}
 --- !u!1 &1978396578
 GameObject:
   m_ObjectHideFlags: 0
