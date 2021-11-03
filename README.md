@@ -1,15 +1,21 @@
 # A-Star-pathfinding-system
-This is a algorithmn demonstration of the A* grid system implemented in Unity 2021
-## Things that I have done so far
+This is a algorithmn demonstration of the A* grid system implemented in Unity 2021 and there is a comparison with the Built in Unity Navmesh System
+## Instructions of the Unity Demo
+There are two versions of the A* system in my project however v2 is only one that works properly in scene
 
-- Worked through an understanding of the A* algorithmn system and attempted it in Unity 3d scene space.
-- Wrote comments within the system I made marked each attempt in the A* system by Versions within the scripts
-- Made a new Version of the A* pathfinding with corrections made to function properly as intended now.
+There is the now standard pathfinding system Navmesh that I compared it to where it's the same scene except with the navmesh system instead
 
-## Things that need to work on
+### To run A* pathfinding scene
+The grid script is in the A* gameobject on the scene where it will display the grid in both the game and scene display you can just manipulate it freely.
 
-- Create an Navmesh system for environments extremely similar to the scenes in the project already.
-- Compare to two types of pathfinding in Unity for performance testing on any given system
+Clicking on the game screen on the scene will move the player object to anywhere on the plane which in turn shows the new path on screen on update
+
+WARNING THE APP WITH A LARGE NODE COUNT WILL TAKE A TOLL ON THE SYSTEM atm
+
+probably be better with ecs grid implementation once I learn that
+
+### To run Navmesh scene
+on NavMeshDemo scene simply press the spacebar in the keyboard to initiate travel to the target destination in the scene it's cube (5)
 
 ## Resources 
 A* introduction - http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
